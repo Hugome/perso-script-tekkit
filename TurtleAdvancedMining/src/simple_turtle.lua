@@ -9,12 +9,12 @@ function ifReturnHome()
   for i = 1, 16 do
     if(turtle.getItemCount(i) == 0) then emptySlot = emptySlot + 1 end
   end
-  if(emptySlot >= 1)then return false
+  if(emptySlot <= 1)then return false
   else return true
   end
 end
 function checkReturnHome()
-  if(ifReturnHome) then
+  if(ifReturnHome()) then
     turtle.turnRight()
     turtle.turnRight()
     for i = 1, digged_tunnel do
