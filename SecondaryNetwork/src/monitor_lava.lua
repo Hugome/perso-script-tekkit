@@ -2,7 +2,7 @@
 os.loadAPI("ocs/apis/sensor")
 
 --Peripheral var
-m = peripheral.wrap("monitor_0")
+m = peripheral.wrap("monitor_1")
 tank_sensor = sensor.wrap("top")
 
 while true do
@@ -21,13 +21,13 @@ while true do
   --Graphics update
   m.clear()
   m.setCursorPos(1, 1)
-  m.write("  Stockage de lave  ")
+  m.write(" Stockage de lave")
   m.setCursorPos(1, 2)
-  m.write("Capacite : " .. totalCapacity .. " mB")
+  m.write("Stockage: " .. totalCapacity .. "mB")
   m.setCursorPos(1, 3)
-  m.write("Rempli : " .. totalAmount .. " mB")
+  m.write("Rempli: " .. totalAmount .. "mB")
   m.setCursorPos(1, 4)
-  m.write("Plein a " .. percent .. " %")
+  m.write("Plein a " .. (string.format("%.2f", percent) .. "%")
   sleep(0.5)
 end
 
