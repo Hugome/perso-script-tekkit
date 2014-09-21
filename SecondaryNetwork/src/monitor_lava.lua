@@ -8,18 +8,19 @@ tank_sensor = sensor.wrap("top")
 
 --Init
 tanks = {}
+nb_tanks = 0;
 
 for pos, target in pairs(tank_sensor.getTargets()) do 
   if(pos == "0,0,3" or pos == "0,0,4" or pos == "1,0,3" or pos == "1,0,4") then
-    local id = "tank_" .. table.getn(tanks)
+    local id = "tank_" .. nb_tanks
     tanks[id] = tank_sensor.getTargetDetails(pos)
-    tanks[id] = tanks[id].Tanks[1]
+    nb_tanks = nb_tanks + 1
   end
 end
 
 print("Load tank : ")
 for pos, tank in tanks do
-  print("Pos : ", pos, ", Name : ", tank.Name)
+  print(textutils.serialize(tank))
 end
 
 --totalCapacity = tank_1.Capacity + tank_2.Capacity + tank_3.Capacity + tank_4.Capacity
