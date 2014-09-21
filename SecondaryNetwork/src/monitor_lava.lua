@@ -7,12 +7,13 @@ tank_sensor = sensor.wrap("top")
 
 
 --Init
-tanks = {};
+tanks = {}
 
 for pos, target in pairs(tank_sensor.getTargets()) do 
   if(pos == "0,0,3" or pos == "0,0,4" or pos == "1,0,3" or pos == "1,0,4") then
-    table[pos] = tank_sensor.getTargetDetails(name);
-    table[pos] = table[pos].Tanks[1];
+    local id = "tank_" .. table.getn(tanks)
+    tanks[id] = tank_sensor.getTargetDetails(pos)
+    tanks[id] = tanks[id].Tanks[1]
   end
 end
 
@@ -29,3 +30,4 @@ end
 --print("Amount : ", totalAmount)
 --print("Ratio : ", percent, "%")
 --Command for computer : openp/github run Hugome perso-script-tekkit master SecondaryNetwork/src/monitor_lava.lua
+--Command for computer : openp/github get Hugome perso-script-tekkit master SecondaryNetwork/src/monitor_lava.lua startup
