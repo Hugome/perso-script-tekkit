@@ -2,16 +2,16 @@
 os.loadAPI("ocs/apis/sensor")
 
 --Peripheral var
-local m = peripheral.wrap("monitor_0")
-local tank_sensor = sensor.wrap("top")
+m = peripheral.wrap("monitor_0")
+tank_sensor = sensor.wrap("top")
 
 
 --Init
 for k,v in pairs(tank_sensor.getTargets()) do 
-  if(k == "0,0,3") then local tank_1 = v;
-  elseif(k == "0,0,4") then local tank_2 = v;
-  elseif(k == "1,0,3") then local tank_3 = v;
-  elseif(k == "1,0,4") then local tank_4 = v;
+  if(k == "0,0,3") then tank_1 = v;
+  elseif(k == "0,0,4") then tank_2 = v;
+  elseif(k == "1,0,3") then tank_3 = v;
+  elseif(k == "1,0,4") then tank_4 = v;
   end
 end
 
