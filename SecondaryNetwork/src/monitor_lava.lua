@@ -1,9 +1,17 @@
 --Load
 os.loadAPI("ocs/apis/sensor")
 
+--Utils
+function round(num, idp)
+  local mult = 10^(idp or 0)
+  return math.floor(num * mult + 0.5) / mult
+end
+
 --Peripheral var
 m = peripheral.wrap("monitor_1")
 tank_sensor = sensor.wrap("top")
+
+
 
 while true do
   --Update
@@ -29,13 +37,6 @@ while true do
   m.setCursorPos(1, 4)
   m.write("Plein a " .. (round(percent, 2)) .. "%")
   sleep(0.5)
-end
-
-
---Utils
-function round(num, idp)
-  local mult = 10^(idp or 0)
-  return math.floor(num * mult + 0.5) / mult
 end
 
 --Command for computer : openp/github run Hugome perso-script-tekkit master SecondaryNetwork/src/monitor_lava.lua
