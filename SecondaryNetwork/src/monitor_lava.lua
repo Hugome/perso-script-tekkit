@@ -6,7 +6,7 @@ m = peripheral.wrap("monitor_1")
 tank_sensor = sensor.wrap("top")
 
 
-
+oldpercent = 0;
 while true do
   --Update
   local totalCapacity = 0
@@ -30,6 +30,13 @@ while true do
   m.write("Rempli: " .. totalAmount .. "mB")
   m.setCursorPos(1, 4)
   m.write("Plein a " .. (math.floor(percent)) .. "%")
+  m.setCursorPos(1, 5)
+  m.write("Tendance: ")
+  if(percent > oldpercent)then m.write("Hausse")
+  elseif(percent < oldpercent)then m.write("Baisse")
+  else m.write("Stable")
+  end
+  oldpercent = percent
   sleep(0.5)
 end
 
