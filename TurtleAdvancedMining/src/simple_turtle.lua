@@ -20,6 +20,7 @@ function checkReturnHome()
     for i = 1, digged_tunnel do
       checkFuel()
       turtle.forward()
+      whileDig()
     end
     for i = 1, 16 do
       turtle.select(i)
@@ -30,6 +31,7 @@ function checkReturnHome()
     for i = 1, digged_tunnel do
       checkFuel()
       turtle.forward()
+      whileDig()
     end
   end
 end
@@ -99,6 +101,7 @@ turtle.turnRight()
 turtle.turnRight()
 for i = 1, digged_tunnel do
   checkFuel()
+  whileDig()
   turtle.forward()
 end
 --Vidage totale
