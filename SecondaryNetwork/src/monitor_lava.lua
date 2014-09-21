@@ -29,7 +29,7 @@ while true do
   m.setCursorPos(1, 3)
   m.write("Rempli: " .. totalAmount .. "mB")
   m.setCursorPos(1, 4)
-  m.write("Plein a " .. (math.round(percent*100)*0.1) .. "%")
+  m.write("Plein a " .. (math.floor(percent)) .. "%")
   sleep(0.5)
 end
 
