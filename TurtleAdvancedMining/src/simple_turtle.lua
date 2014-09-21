@@ -9,8 +9,8 @@ function ifReturnHome()
   for i = 1, 16 do
     if(turtle.getItemCount(i) == 0) then emptySlot = emptySlot + 1 end
   end
-  if(emptySlot <= 1)then return false
-  else return true
+  if(emptySlot <= 1)then return true
+  else return false
   end
 end
 function checkReturnHome()
