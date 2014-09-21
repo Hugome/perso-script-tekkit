@@ -8,10 +8,10 @@ tank_sensor = sensor.wrap("top")
 
 --Init
 for name, target in pairs(tank_sensor.getTargets()) do 
-  if(k == "0,0,3")      then tank_1 = tank_sensor.getTargetDetails(name);
-  elseif(k == "0,0,4")  then tank_2 = tank_sensor.getTargetDetails(name);
-  elseif(k == "1,0,3")  then tank_3 = tank_sensor.getTargetDetails(name);
-  elseif(k == "1,0,4")  then tank_4 = tank_sensor.getTargetDetails(name);
+  if(k == "0,0,3")      then tank_1 = tank_sensor.getTargetDetails(name).Tanks[1];
+  elseif(k == "0,0,4")  then tank_2 = tank_sensor.getTargetDetails(name).Tanks[1];
+  elseif(k == "1,0,3")  then tank_3 = tank_sensor.getTargetDetails(name).Tanks[1];
+  elseif(k == "1,0,4")  then tank_4 = tank_sensor.getTargetDetails(name).Tanks[1];
   end
 end
 
