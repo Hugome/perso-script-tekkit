@@ -1,12 +1,6 @@
 --Load
 os.loadAPI("ocs/apis/sensor")
 
---Utils
-function round(num, idp)
-  local mult = 10^(idp or 0)
-  return math.floor(num * mult + 0.5) / mult
-end
-
 --Peripheral var
 m = peripheral.wrap("monitor_1")
 tank_sensor = sensor.wrap("top")
@@ -35,7 +29,7 @@ while true do
   m.setCursorPos(1, 3)
   m.write("Rempli: " .. totalAmount .. "mB")
   m.setCursorPos(1, 4)
-  m.write("Plein a " .. (round(percent, 2)) .. "%")
+  m.write("Plein a " .. (math.round(percent*100)*0.1) .. "%")
   sleep(0.5)
 end
 
