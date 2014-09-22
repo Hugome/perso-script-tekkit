@@ -1,2 +1,3 @@
-perso-script-tekkit
+Script personnel pour serveur tekkit
 ===================
+
