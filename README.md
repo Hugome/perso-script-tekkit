@@ -1,3 +1,3 @@
-Script personnel pour serveur tekkit
+Scripts personnels pour serveur tekkit
 ===================
 
