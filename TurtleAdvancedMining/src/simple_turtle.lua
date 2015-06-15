@@ -25,7 +25,7 @@ function checkReturnHome()
     end
     for i = 1, 16 do
       turtle.select(i)
-      if (turtle.refuel(0) == false) then turtle.drop() end
+      if (turtle.refuel(0) == false) then turtle.dropUp() end
     end
     turtle.turnRight()
     turtle.turnRight()
@@ -109,7 +109,7 @@ end
 --Vidage totale
 for i = 1, 16 do
   turtle.select(i)
-  turtle.drop()
+  turtle.dropUp()
 end
 
 --Command for computer : openp/github run Hugome perso-script-tekkit master TurtleAdvancedMining/src/simple_turtle.lua
