@@ -13,11 +13,12 @@ function ifReturnHome()
   else return false
   end
 end
+
 function checkReturnHome()
   if(ifReturnHome()) then
     turtle.turnRight()
     turtle.turnRight()
-    for i = 1, digged_tunnel do
+    for i = 1, (digged_tunnel - 1) do
       checkFuel()
       turtle.forward()
       whileDig()
