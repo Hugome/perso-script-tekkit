@@ -25,7 +25,7 @@ function checkReturnHome()
     end
     for i = 1, 16 do
       turtle.select(i)
-      if (turtle.refuel(0) == false) then turtle.dropUp() end
+      if (turtle.refuel(0) == false) then turtle.drop() end
     end
     turtle.turnRight()
     turtle.turnRight()
