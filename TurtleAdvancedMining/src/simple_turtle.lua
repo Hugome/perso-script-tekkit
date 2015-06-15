@@ -18,7 +18,7 @@ function checkReturnHome()
   if(ifReturnHome()) then
     turtle.turnRight()
     turtle.turnRight()
-    for i = 1, (digged_tunnel - 1) do
+    for i = 1, digged_tunnel do
       checkFuel()
       turtle.forward()
       whileDig()
@@ -105,10 +105,11 @@ for i = 1, digged_tunnel do
   whileDig()
   turtle.forward()
 end
+
 --Vidage totale
 for i = 1, 16 do
   turtle.select(i)
-  turtle.dropUp()
+  turtle.drop()
 end
 
 --Command for computer : openp/github run Hugome perso-script-tekkit master TurtleAdvancedMining/src/simple_turtle.lua
