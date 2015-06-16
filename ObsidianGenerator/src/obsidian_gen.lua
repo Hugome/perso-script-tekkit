@@ -1,6 +1,7 @@
 toBreak = 0
 breaked = 0
 
+redstone.setOutput("right", false)
 -- Count obsidian to generate
 for i = 1, 16 do
   local slotDetails = turtle.getItemDetail()
@@ -25,16 +26,17 @@ end
 -- Generate all obsi from 1 slot
 function slotToObsi()
   local slotDetails = turtle.getItemDetail()
-  redstone.setOutput("right", true)
   while (slotDetails ~= nil and slotDetails.name == "minecraft:redstone" and turtle.getItemCount() > 0) do
+  redstone.setOutput("right", false)
   turtle.place()
+  redstone.setOutput("right", true)
   sleep(0.5)
+  redstone.setOutput("right", false)
   turtle.dig()
   breaked = breaked + 1
   updateDisplay()
   slotDetails = turtle.getItemDetail()
   end
-  redstone.setOutput("right", false)
 end
 
 -- Generate obsi from all slots of turtle
@@ -42,6 +44,7 @@ for i = 1, 16 do
   turtle.select(i)
   slotToObsi()
 end
+redstone.setOutput("right", false)
 turtle.select(1)
 
 --Command for computer : openp/github run Hugome perso-script-tekkit master ObsidianGenerator/src/obsidian_gen.lua
