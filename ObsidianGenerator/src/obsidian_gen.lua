@@ -1,6 +1,7 @@
 toBreak = 0
 breaked = 0
 
+redstone.setOutput("bottom", true)
 -- Count obsidian to generate
 for i = 1, 16 do
   local slotDetails = turtle.getItemDetail()
@@ -40,6 +41,7 @@ for i = 1, 16 do
   turtle.select(i)
   slotToObsi()
 end
+redstone.setOutput("bottom", false)
 turtle.select(1)
 
 --Command for computer : openp/github run Hugome perso-script-tekkit master ObsidianGenerator/src/obsidian_gen.lua
