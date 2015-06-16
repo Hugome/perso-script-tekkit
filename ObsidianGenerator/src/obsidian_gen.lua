@@ -16,9 +16,9 @@ function updateDisplay()
   local monitor = peripheral.wrap("top")
   local percent = (toBreak / breaked) * 100;
   monitor.clear()
-  m.setCursorPos(1, 1)
+  monitor.setCursorPos(1, 1)
   monitor.write("Obsidian :")
-  m.setCursorPos(1, 2)
+  monitor.setCursorPos(1, 2)
   monitor.write(percent .. "%")
 end
 
