@@ -5,7 +5,7 @@ breaked = 0
 for i = 1, 16 do
   local slotDetails = turtle.getItemDetail()
   turtle.select(i)
-  if (slotDetails.name == "minecraft:redstone") then
+  if (slotDetails ~= nil and slotDetails.name == "minecraft:redstone") then
     toBreak = toBreak + turtle.getItemCount()
   end
 end
@@ -24,7 +24,7 @@ end
 -- Generate all obsi from 1 slot
 function slotToObsi()
   local slotDetails = turtle.getItemDetail()
-  while (turtle.getItemCount() > 0 and slotDetails.name == "minecraft:redstone") do
+  while (turtle.getItemCount() > 0 and slotDetails ~= nil and slotDetails.name == "minecraft:redstone") do
   turtle.place()
   sleep(0.5)
   turtle.dig()
