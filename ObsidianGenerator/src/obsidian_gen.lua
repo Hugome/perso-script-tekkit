@@ -7,6 +7,7 @@ for i = 1, 16 do
   turtle.select(i)
   if (slotDetails ~= nil and slotDetails.name == "minecraft:redstone") then
     toBreak = toBreak + turtle.getItemCount()
+    slotDetails = turtle.getItemDetail()
   end
 end
 
@@ -29,6 +30,8 @@ function slotToObsi()
   sleep(0.5)
   turtle.dig()
   breaked = breaked + 1
+  updateDisplay()
+  slotDetails = turtle.getItemDetail()
   end
 end
 
