@@ -30,7 +30,7 @@ function slotToObsi()
   redstone.setOutput("left", false)
   turtle.place()
   redstone.setOutput("left", true)
-  sleep(2)
+  sleep(2.5)
   redstone.setOutput("left", false)
   turtle.dig()
   breaked = breaked + 1
