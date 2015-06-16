@@ -15,7 +15,7 @@ end
 -- Update monitor
 function updateDisplay()
   local monitor = peripheral.wrap("top")
-  local percent = (toBreak / breaked) * 100;
+  local percent = (breaked / toBreak) * 100;
   monitor.clear()
   monitor.setCursorPos(1, 1)
   monitor.write("Obsidian :")
@@ -30,7 +30,7 @@ function slotToObsi()
   redstone.setOutput("left", false)
   turtle.place()
   redstone.setOutput("left", true)
-  sleep(0.5)
+  sleep(1)
   redstone.setOutput("left", false)
   turtle.dig()
   breaked = breaked + 1
