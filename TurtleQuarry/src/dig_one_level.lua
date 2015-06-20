@@ -31,9 +31,7 @@ function digOneLevel(width, height)
     for y=1, (height + 1) do
       checkEnd()
       turtle.digDown()
-      if y == height then
-        forwardTurtle()
-      end
+      forwardTurtle()
     end
     if x < width then
       changeLine(x)
