@@ -24,7 +24,7 @@ function forwardTurtle()
       turtle.attack()
     end
     if i >= 100 then
-      exit()
+      error("Bloquer !")
     end
     i = i + 1
   end
@@ -42,7 +42,7 @@ function downTurtle() --Entity or block gene
       turtle.attackDown()
     end
     if i >= 100 then
-      exit()
+      error("Bloquer !")
     end
     i = i + 1
   end
@@ -60,7 +60,7 @@ function upTurtle() --Entity or block gene
       turtle.attackUp()
     end
     if i >= 100 then
-      exit()
+      error("Bloquer !")
     end
     i = i + 1
   end
