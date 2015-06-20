@@ -27,8 +27,8 @@ function returnToStartPoint(width, height)
 end
 
 function digOneLevel(width, height)
-  for x=1, width do
-    for y=1, height do
+  for x=0, width do
+    for y=0, height do
       checkEnd()
       turtle.digDown()
       if y < height - 1 then
