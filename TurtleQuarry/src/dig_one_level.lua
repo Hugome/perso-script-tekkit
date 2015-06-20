@@ -35,6 +35,9 @@ function digOneLevel(width, height)
         forwardTurtle()
       end
     end
+    if x == width then
+      changeLine(x)
+    end
   end
   returnToStartPoint(width, height)
 end
