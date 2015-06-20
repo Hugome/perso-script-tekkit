@@ -1,4 +1,4 @@
-while true then
+while true do
       os.queueEvent("randomEvent")
       os.pullEvent()
       turtle.attack()
