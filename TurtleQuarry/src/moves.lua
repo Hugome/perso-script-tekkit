@@ -17,6 +17,7 @@ function forwardTurtle()
   local i = 0
   while retmove == false do
     checkFuel()
+    turtle.suck()
     retmove = turtle.forward()
     if retmove == false then
       turtle.dig()
@@ -34,6 +35,7 @@ function downTurtle() --Entity or block gene
   local i = 0
   while retmove == false do
     checkFuel()
+    turtle.suckDown()
     retmove = turtle.down()
     if retmove == false then
       turtle.digDown()
@@ -51,6 +53,7 @@ function upTurtle() --Entity or block gene
   local i = 0
   while retmove == false do
     checkFuel()
+    turtle.suckUp()
     retmove = turtle.up()
     if retmove == false then
       turtle.digUp()
