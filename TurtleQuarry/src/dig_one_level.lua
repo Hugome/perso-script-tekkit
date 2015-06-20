@@ -23,6 +23,7 @@ function returnToStartPoint(width, height)
   for x=1, (width + 1) do
     forwardTurtle()
   end
+  turtle.turnLeft();
 end
 
 function digOneLevel(width, height)
