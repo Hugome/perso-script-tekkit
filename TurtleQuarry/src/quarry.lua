@@ -1,9 +1,3 @@
---User set var
-print("Longeur :")
-height = tonumber(read())
-print("Largeur :")
-width = tonumber(read())
-
 --Init functions
 function installAndLoadFile(name)
   if fs.exists(name) then
@@ -19,6 +13,11 @@ installAndLoadFile("moves.lua")
 installAndLoadFile("full_inv.lua")
 installAndLoadFile("check_end.lua")
 
+--User set var
+print("Longeur :")
+height = tonumber(read())
+print("Largeur :")
+width = tonumber(read())
 --Runs
 z = 0
 while isEndOfQuarry() == false do
