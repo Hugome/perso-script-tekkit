@@ -16,6 +16,7 @@ end
 --Inits
 installAndLoadFile("dig_one_level.lua")
 installAndLoadFile("moves.lua")
+installAndLoadFile("full_inv.lua")
 installAndLoadFile("check_end.lua")
 
 --Runs
