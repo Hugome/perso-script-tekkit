@@ -22,9 +22,19 @@ installAndLoadFile("check_end.lua")
 z = 0
 while isEndOfQuarry() == false do
   digOneLevel(width, height)
-  downTurtle()
+  if isEndOfQuarry() == false then
+    if isReturnHome() then
+      returnToHome(z)
+      dropAllInventory()
+      returnToCurrentZ(z)
+    end
+    downTurtle()
+  end
   z = z + 1
 end
+
+returnToHome(z - 1)
+dropAllInventory()
 
 --Command for computer : openp/github run Hugome perso-script-tekkit master TurtleQuarry/src/quarry.lua
 --Command for computer : openp/github get Hugome perso-script-tekkit master TurtleQuarry/src/quarry.lua startup
