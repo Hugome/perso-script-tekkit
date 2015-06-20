@@ -12,17 +12,53 @@ function checkFuel()
   turtle.select(1)
 end
 
-function forwardTurtle() --Entity or block gene
-  checkFuel()
-  turtle.forward()
+function forwardTurtle()
+  local retmove = false
+  local i = 0
+  while retmove == false do
+    checkFuel()
+    retmove = turtle.forward()
+    if retmove == false then
+      turtle.dig()
+      turtle.attack()
+    end
+    if i >= 100 then
+      exit()
+    end
+    i = i + 1
+  end
 end
 
 function downTurtle() --Entity or block gene
-  checkFuel()
-  turtle.down()
+  local retmove = false
+  local i = 0
+  while retmove == false do
+    checkFuel()
+    retmove = turtle.down()
+    if retmove == false then
+      turtle.digDown()
+      turtle.attackDown()
+    end
+    if i >= 100 then
+      exit()
+    end
+    i = i + 1
+  end
 end
 
 function upTurtle() --Entity or block gene
-  checkFuel()
-  turtle.up()
+  local retmove = false
+  local i = 0
+  while retmove == false do
+    checkFuel()
+    retmove = turtle.up()
+    if retmove == false then
+      turtle.digUp()
+      turtle.attackUp()
+    end
+    if i >= 100 then
+      exit()
+    end
+    i = i + 1
+  end
 end
