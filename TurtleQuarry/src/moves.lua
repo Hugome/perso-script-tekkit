@@ -24,5 +24,5 @@ end
 
 function upTurtle() --Entity or block gene
   checkFuel()
-  turtle.down()
+  turtle.up()
 end
