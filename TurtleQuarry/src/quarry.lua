@@ -15,6 +15,8 @@ end
 
 --Inits
 installAndLoadFile("dig_one_level.lua")
+installAndLoadFile("moves.lua")
+installAndLoadFile("check_end.lua")
 
 --Functions
 function isReturnHome()
@@ -41,7 +43,12 @@ function checkFuel()
 end
 
 --Runs
-test_api()
+z = 0
+while isEndOfQuarry() == false do
+  digOneLevel(width, height)
+  downTurtle()
+  z = z + 1
+end
 
 --Command for computer : openp/github run Hugome perso-script-tekkit master TurtleQuarry/src/quarry.lua
 --Command for computer : openp/github get Hugome perso-script-tekkit master TurtleQuarry/src/quarry.lua startup
