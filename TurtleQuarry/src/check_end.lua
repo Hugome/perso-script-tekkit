@@ -2,8 +2,8 @@
 end_detected = false
 
 function checkEnd()
-  local data = turtle.inspectDown()
-  if data.name == "minecraft:bedrock" then
+  local sucess, data = turtle.inspectDown()
+  if sucess and data.name == "minecraft:bedrock" then
     end_detected = true
   end
 end

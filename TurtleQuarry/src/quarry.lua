@@ -10,7 +10,7 @@ function installAndLoadFile(name)
     fs.delete(name)
   end
   shell.run("openp/github get Hugome perso-script-tekkit master TurtleQuarry/src/" .. name .. " " .. name)
-  os.loadAPI(name)
+  shell.run(name)
 end
 
 --Inits
