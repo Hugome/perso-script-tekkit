@@ -1,6 +1,6 @@
 
 function changeLine(x)
-  if ((x % 2) == 0) then
+  if (((x + 1) % 2) == 1) then
     turtle.turnLeft();
     forwardTurtle()
     turtle.turnLeft();
@@ -12,7 +12,7 @@ function changeLine(x)
 end
 
 function returnToStartPoint(width, height)
-  if (width % 2) == 1 then
+  if ((width + 1) % 2) == 1 then
     turtle.turnLeft();
     turtle.turnLeft();
     for y=0, height do
