@@ -11,19 +11,23 @@ end
 
 function returnToHome(z)
   for cz=0, z do
-    upTurtle();
+    upTurtle()
   end
 end
 
 function returnToCurrentZ(z)
   for cz=0, z do
-    downTurtle();
+    downTurtle()
   end
 end
 
 function dropAllInventory()
+  turtle.turnLeft()
+  turtle.turnLeft()
   for i=1, 16 do
     turtle.select(i)
     if (turtle.refuel(0) == false) then turtle.drop() end
   end
+  turtle.turnLeft()
+  turtle.turnLeft()
 end
