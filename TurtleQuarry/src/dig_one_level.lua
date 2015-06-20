@@ -15,12 +15,12 @@ function returnToStartPoint(width, height)
   if (width % 2) == 1 then
     turtle.turnLeft();
     turtle.turnLeft();
-    for y=0, (height - 1) do
+    for y=1, (height - 1) do
       forwardTurtle()
     end
   end
   turtle.turnLeft();
-  for x=0, (width - 1) do
+  for x=1, (width - 1) do
     forwardTurtle()
   end
   turtle.turnLeft();
