@@ -34,7 +34,7 @@ while isEndOfQuarry() == false do
   z = z + 1
 end
 
-returnToHome(z - 1)
+returnToHome(z)
 dropAllInventory()
 
 --Command for computer : openp/github run Hugome perso-script-tekkit master TurtleQuarry/src/quarry.lua
