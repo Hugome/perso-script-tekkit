@@ -15,19 +15,19 @@ function returnToStartPoint(width, height)
   if (width % 2) == 1 then
     turtle.turnLeft();
     turtle.turnLeft();
-    for y=0, height do
+    for y=0, (height - 1) do
       forwardTurtle()
     end
   end
   turtle.turnLeft();
-  for x=0, width do
+  for x=0, (width - 1) do
     forwardTurtle()
   end
   turtle.turnLeft();
 end
 
 function digOneLevel(width, height)
-  for x=1, (width + 1) do
+  for x=1, width do
     for y=1, (height + 1) do
       checkEnd()
       turtle.digDown()
@@ -35,7 +35,6 @@ function digOneLevel(width, height)
         forwardTurtle()
       end
     end
-    
     if x < width then
       changeLine(x)
     end
