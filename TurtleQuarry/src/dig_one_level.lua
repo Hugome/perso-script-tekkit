@@ -1,6 +1,6 @@
 
 function changeLine(x)
-  if ((x % 2) == 1) then
+  if ((x % 2) == 0) then
     turtle.turnLeft();
     forwardTurtle()
     turtle.turnLeft();
