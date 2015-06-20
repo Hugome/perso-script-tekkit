@@ -27,13 +27,15 @@ function returnToStartPoint(width, height)
 end
 
 function digOneLevel(width, height)
-  for x=1, (width + 1) do
-    for y=1, (height + 1) do
+  for x=1, width do
+    for y=1, height do
       checkEnd()
       turtle.digDown()
-      forwardTurtle()
+      if y < height - 1 then
+        forwardTurtle()
+      end
     end
-    if x < width then
+    if x < width - 1 then
       changeLine(x)
     end
   end
